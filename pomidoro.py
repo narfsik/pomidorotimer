@@ -23,8 +23,7 @@ class Pomodoro:
             if timer==0:
                 playsound("tomato-squash.mp3")
                 messagebox.showinfo(
-                    "Good job!", "Take a break, \
-                    nClick break button")
+                    "Good job!", "Take a break")
                 
             timer-=1
 
@@ -35,8 +34,7 @@ class Pomodoro:
             if timer==0:
                 playsound("tomato-squash.mp3")
                 messagebox.showinfo(
-                    "Times up!", "Get back to work, \
-                        nClick Work Button")
+                    "Times up!", "Get back to work")
             timer-=1
 
     def main(self):
