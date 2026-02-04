@@ -21,7 +21,7 @@ class Pomodoro:
         while timer>=0:
             self.work_break(timer)
             if timer==0:
-                playsound("sound.mp3")
+                playsound("tomato-squash.mp3")
                 messagebox.showinfo(
                     "Good job!", "Take a break, \
                     nClick break button")
@@ -33,7 +33,7 @@ class Pomodoro:
         while timer>=0:
             pomo.work_break(timer)
             if timer==0:
-                playsound("sound.mp3")
+                playsound("tomato-squash.mp3")
                 messagebox.showinfo(
                     "Times up!", "Get back to work, \
                         nClick Work Button")
