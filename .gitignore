@@ -1,0 +1,8 @@
+build/
+*.o
+*.exe
+*.elf
+*.bin
+*.map
+*.log
+.DS_Store
