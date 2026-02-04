@@ -45,25 +45,29 @@ class Pomodoro:
         self.root.title("Pomidoro Timer")
 
         #label
+        #frame for the timer labels
+        time_frame=tk.Frame(self.root, bg="#e9edc9")
+        time_frame.pack(pady=10)
+
         self.min=tk.StringVar(self.root)
         self.min.set("25")
         self.sec=tk.StringVar(self.root)
         self.sec.set("00")
-
-        self.min_label=tk.Label(self.root, 
+        #minutes label
+        self.min_label=tk.Label(time_frame, 
                                 textvariable=self.min,
 font=(
 
-            "arial", 22, "bold"), bg="red", fg="black")
-        self.min_label.pack()
+            "arial", 22, "bold"), bg="#918450", fg="#fefae0")
+        self.min_label.pack(side="left")
 
-        self.sec_label=tk.Label(self.root,
+        self.sec_label=tk.Label(time_frame,
                                 textvariable=self.sec,
 font=(
-            "arial", 22, "bold"), bg="black", fg="white")
-        self.sec_label.pack()
+            "arial", 22, "bold"), bg="#918450", fg="#fefae0")
+        self.sec_label.pack(side="left")
 
-        canvas=tk.Canvas(self.root)
+        canvas = tk.Canvas(self.root, bg="#e9edc9")
         canvas.pack(expand=True, fill="both")
         img=Image.open("pomidor.png")
         img = img.resize((850, 700), Image.LANCZOS)
@@ -71,11 +75,11 @@ font=(
         canvas.create_image(225, 20, image=bg, anchor="center")
 
         btn_work=tk.Button(self.root, text="Start",
-                           bd=5, command=self.work, bg="red", font=(
+                           bd=5, command=self.work, bg="#918450", fg="#fefae0", font=(
                                "arial", 15, "bold")).place(x=140, y=380)
         btn_break=tk.Button(self.root, text="Break",
-                            bd=5, command=self.break_, 
-                            bg="red", font=(
+                            bd=5, fg="#fefae0", command=self.break_, 
+                            bg="#918450", font=(
                                 "arial", 15, "bold")).place(x=240, y=380)
         self.root.mainloop()
 
